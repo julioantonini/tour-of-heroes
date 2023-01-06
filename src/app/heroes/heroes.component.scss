@@ -1,0 +1,6 @@
+.heroes li {
+  cursor: pointer;
+}
+.heroes li.selected {
+  font-weight: bold;
+}
