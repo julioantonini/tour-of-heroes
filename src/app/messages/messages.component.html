@@ -1,0 +1,26 @@
+<table
+  elevation="0"
+  mat-table
+  [dataSource]="messageService.getMessages()"
+  class="mat-elevation-z1"
+>
+  <ng-container matColumnDef="message">
+    <th mat-header-cell *matHeaderCellDef>Message</th>
+    <td mat-cell *matCellDef="let element">{{ element.message }}</td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+</table>
+
+<div *ngIf="messageService.getMessages().length">
+  <br />
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="messageService.clear()"
+    class="mat-elevation-z0"
+  >
+    Clear messages
+  </button>
+</div>
