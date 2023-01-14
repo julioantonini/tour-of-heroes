@@ -8,7 +8,7 @@ import { MessageService } from '../message.service';
   styleUrls: ['./messages.component.scss'],
 })
 export class MessagesComponent {
-  public displayedColumns: string[] = ['message'];
+  displayedColumns: string[] = ['message'];
 
   constructor(public messageService: MessageService) {}
 }

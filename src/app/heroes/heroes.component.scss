@@ -1,6 +1,4 @@
-.heroes li {
+.mat-mdc-row:hover {
   cursor: pointer;
-}
-.heroes li.selected {
-  font-weight: bold;
+  background: whitesmoke;
 }

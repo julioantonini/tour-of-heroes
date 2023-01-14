@@ -2,27 +2,29 @@
   <mat-toolbar color="primary">
     <span>{{ title }}</span>
     <span class="example-spacer"></span>
+
     <button
       mat-icon-button
-      aria-label="Heroes list"
-      matTooltip="Heroes list"
-      routerLink="/heroes"
+      aria-label="Dashboard"
+      matTooltip="Dashboard"
+      [routerLink]="['/dashboard']"
     >
-      <mat-icon>sports_martial_arts</mat-icon>
+      <mat-icon>dashboard</mat-icon>
     </button>
 
     <button
       mat-icon-button
       aria-label="Heroes list"
-      matTooltip="Home"
-      routerLink="/"
+      matTooltip="Heroes list"
+      [routerLink]="['/heroes']"
     >
-      <mat-icon>home</mat-icon>
+      <mat-icon>sports_martial_arts</mat-icon>
     </button>
   </mat-toolbar>
 </p>
 
 <div class="content">
   <router-outlet></router-outlet>
+  <br />
   <app-messages></app-messages>
 </div>

@@ -4,16 +4,13 @@ import { Hero } from '../hero.model';
 import { HeroService } from '../hero.service';
 
 @Component({
-  selector: 'app-heroes',
-  templateUrl: './heroes.component.html',
-  styleUrls: ['./heroes.component.scss'],
+  selector: 'app-dashboard',
+  templateUrl: './dashboard.component.html',
+  styleUrls: ['./dashboard.component.scss'],
 })
-export class HeroesComponent implements OnInit {
+export class DashboardComponent implements OnInit {
   heroes: Hero[] = [];
-  displayedColumns: string[] = ['id', 'name'];
-
-  constructor(private heroService: HeroService) {}
-
+  constructor(private readonly heroService: HeroService) {}
   ngOnInit(): void {
     this.getHeroes();
   }

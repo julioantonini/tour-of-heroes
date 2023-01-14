@@ -1,0 +1,12 @@
+<h1>Dashboard</h1>
+
+<div class="flex-gap">
+  <mat-card
+    class="pointer"
+    *ngFor="let hero of heroes"
+    [routerLink]="['/heroes/{{hero.id}}']"
+    routerLinkActive="router-link-active"
+  >
+    <mat-card-content>{{ hero.name }}</mat-card-content>
+  </mat-card>
+</div>
