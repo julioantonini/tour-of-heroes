@@ -15,7 +15,6 @@ export class MessageService {
   }
 
   getMessages(): TMessage[] {
-    console.log(this.messages);
     return this.messages;
   }
 }

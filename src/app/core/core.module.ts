@@ -4,13 +4,14 @@ import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { AppRoutingModule } from '../app-routing.module';
 import { MaterialModule } from '../material/material.module';
 import { MessagesComponent } from './components/messages/messages.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 
-const COMPONENTS = [MessagesComponent, ToolbarComponent];
+const COMPONENTS = [MessagesComponent, ToolbarComponent, PageNotFoundComponent];
 const MODULES = [MaterialModule, AppRoutingModule];
 
 @NgModule({
-  declarations: [COMPONENTS],
+  declarations: [COMPONENTS, PageNotFoundComponent],
   imports: [CommonModule, MODULES],
   exports: [COMPONENTS, MODULES],
 })
