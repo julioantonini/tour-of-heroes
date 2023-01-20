@@ -1,0 +1,7 @@
+<mat-progress-bar
+  color="warn"
+  mode="indeterminate"
+  *ngIf="this.loadingService.loading$ | async"
+></mat-progress-bar>
+
+<div *ngIf="this.loadingService.loading$ | async" class="space">oi</div>

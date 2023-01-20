@@ -1,14 +1,37 @@
 <div *ngIf="hero">
-  <h1>{{ hero.name | uppercase }} Details</h1>
-  <p>{{ hero.id }}</p>
-  <p>{{ hero.name }}</p>
+  <form [formGroup]="form">
+    <h1>{{ hero.name | uppercase }} Details</h1>
 
-  <div>
-    <label for="name">Hero name: </label>
-    <input id="name" [(ngModel)]="hero.name" placeholder="name" type="text" />
-  </div>
+    <mat-form-field appearance="outline">
+      <mat-label>Id:</mat-label>
+      <input
+        matInput
+        id="id"
+        formControlName="id"
+        type="text"
+        placeholder="id:"
+      />
+    </mat-form-field>
 
-  <br />
+    <br />
 
-  <button mat-raised-button (click)="goBack()">Go back</button>
+    <mat-form-field appearance="outline">
+      <mat-label>Hero name:</mat-label>
+      <input
+        class="bg"
+        matInput
+        id="name"
+        formControlName="name"
+        type="text"
+        placeholder="Hero name:"
+      />
+    </mat-form-field>
+
+    <br />
+
+    <button mat-raised-button color="primary" (click)="update()">Update</button
+    ><br /><br />
+
+    <button mat-raised-button (click)="goBack()">Go back</button>
+  </form>
 </div>

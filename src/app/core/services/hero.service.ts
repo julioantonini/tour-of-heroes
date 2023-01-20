@@ -31,6 +31,8 @@ export class HeroService {
       .pipe(tap((hero) => this.log(`fetched hero id: ${hero.id}`)));
   }
 
+  update(hero: Hero) {}
+
   private log(message: string): void {
     this.messageService.add(`heroService: ${message}`);
   }
